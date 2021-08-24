@@ -16,7 +16,7 @@ class FormulariosController extends Controller
                 'direccion'=>'required',
                 'email'=>'required','email|unique:users,email',
                 'password'=>'required',
-                
+                'password2'=>'required|same:password',
 
                 
         ]);
@@ -29,6 +29,7 @@ class FormulariosController extends Controller
         $form->direccion= $request->input('direccion');
         $form->email= $request->input('email');
         $form->contraseña= $request->input('password');
+      
    
 
         $form->save();

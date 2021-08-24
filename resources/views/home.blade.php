@@ -83,6 +83,17 @@
   @enderror
     </div>
 <br>
+<div class="form-group row" style="margin-right:50px">
+  <label for="inputPassword" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
+  <div class="col-sm-10">
+    <input type="password" class="form-control" name="password2">
+  </div>
+  @error('password2')
+  <br>
+  <small>*{{$message}}</small>
+  <br>
+@enderror
+</div>
       <button type="submit" class="btn btn-success" style="margin-left:50%;margin-bottom:15px;">Enviar</button>
   </form>
 </div>
